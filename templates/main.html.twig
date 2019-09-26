@@ -1,0 +1,75 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/main.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/calculation.css') }}">
+{% endblock %}
+
+{% block javascripts %}
+    <script src="{{ asset('js/calculation.js') }}" async></script>
+{% endblock %}
+
+{% block body %}
+    <div class="calculationForm">
+        <form>
+            <div id="inputBlock">
+                <label for="inputDate">Дата рождения</label>
+                <input type="date" name="date" id="inputDate" min="1900-01-01" max="2099-12-31" required pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" placeholder="гггг-мм-дд">
+                <div id="errorMsg"></div>
+            </div>
+
+            <div id="calculationOutput">
+                <div id="calculationGrid">
+                <div class="cCell" id="cCell1">
+                    <div class="cCellText">
+                        -
+                    </div>
+                </div>
+                <div class="cCell" id="cCell2">
+                    <div class="cCellText">
+                        -
+                    </div>
+                </div>
+                <div class="cCell" id="cCell3">
+                    <div class="cCellText">
+                        -
+                    </div>
+                </div>
+                <div class="cCell" id="cCell4">
+                    <div class="cCellText">
+                        -
+                    </div>
+                </div>
+                <div class="cCell" id="cCell5">
+                    <div class="cCellText">
+                        -
+                    </div>
+                </div>
+                <div class="cCell" id="cCell6">
+                    <div class="cCellText">
+                        -
+                    </div>
+                </div>
+                <div class="cCell" id="cCell7">
+                    <div class="cCellText">
+                        -
+                    </div>
+                </div>
+                <div class="cCell" id="cCell8">
+                    <div class="cCellText">
+                        -
+                    </div>
+                </div>
+                <div class="cCell" id="cCell9">
+                    <div class="cCellText">
+                        -
+                    </div>
+                </div>
+            </div>
+                <div id="calculationDescription">
+                </div>
+            </div>
+            <button class="btn btn-lg btn-primary" id="buttonCalculate" type="button"> Расчитать </button>
+        </form>
+    </div>
+{% endblock %}
